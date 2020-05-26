@@ -33,7 +33,7 @@ public class CerrarSesionServlet extends HttpServlet {
 			sesion.invalidate();
 			System.out.println("Sesion destruidad");
 			response.sendRedirect(request.getContextPath()+"/html/index.html");
-			System.out.println("estoy aqui");
+			
 		}
 		
 	}

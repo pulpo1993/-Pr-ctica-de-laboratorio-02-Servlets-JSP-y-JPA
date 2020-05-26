@@ -1,4 +1,4 @@
-package ec.edu.ups.filtro;
+package ec.ups.edu.filtro;
 
 import java.io.IOException;
 
@@ -47,12 +47,12 @@ public class LoginFilter implements Filter {
 		if(session.getAttribute("usuario")==null)
 		{
 			respues.sendRedirect("..//html/index.html");
-			System.out.println("dfgfg si llega");
+			System.out.println("si entra ");
 		}else
 		{
 			chain.doFilter(request, response);
 			
-			System.out.println("no llega");
+			System.out.println("no entra");
 		}
 	}
 

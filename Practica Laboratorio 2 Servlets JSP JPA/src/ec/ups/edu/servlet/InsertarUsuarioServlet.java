@@ -55,7 +55,7 @@ public class InsertarUsuarioServlet extends HttpServlet {
 		usuario.setNombre(nombre);
 		usuario.setApellido(apellido);
 		usuario.setCorreo(correo);
-		usuario.setContra(contra);
+		
 		dao.create(usuario);
 		System.out.println(usuario.toString());
 					request.getRequestDispatcher("/JSPs/InsertarUsuario.jsp").forward(request, response);

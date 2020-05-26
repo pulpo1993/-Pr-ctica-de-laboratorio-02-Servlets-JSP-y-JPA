@@ -15,6 +15,11 @@ import javax.persistence.*;
 public class Usuario implements Serializable {
 
 	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -142,6 +147,8 @@ public class Usuario implements Serializable {
 		return "Usuario [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo
 				+ ", telefono=" + telefono + "]";
 	}
+
+
 	
 	
    

@@ -44,16 +44,16 @@ public class BuscarPorCedulaServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String accion=request.getParameter("accion");
 		if (accion.equalsIgnoreCase("Iniciar")) {
-			System.out.println("shdbsdhfbshfbsfh");
-			  response.sendRedirect("/TELEFONOSJPA/html/index.html");  
+			System.out.println("probando");
+			  response.sendRedirect("/html/index.html");  
 		}
 		else if (accion.equalsIgnoreCase("Insertar")) {
-			System.out.println("usuarioooooooooooooooo");
-			response.sendRedirect("/TELEFONOSJPA/JSPs/InsertarUsuario.jsp");  
+			System.out.println("usuario");
+			response.sendRedirect("/JSPs/InsertarUsuario.jsp");  
 		}
 		else if (accion.equalsIgnoreCase("Inicio")) {
-			System.out.println("casaaaaaaaaaaaaaaaaaaaaaaaaa");
-			response.sendRedirect("/TELEFONOSJPA/JSPs/Publicca.jsp");  
+			System.out.println("princiapal");
+			response.sendRedirect("/JSPs/Publicca.jsp");  
 		}
 		/*switch (accion) {		
 		case "Iniciar":

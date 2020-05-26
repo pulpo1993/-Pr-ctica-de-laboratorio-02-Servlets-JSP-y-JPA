@@ -1,0 +1,81 @@
+
+body{
+   border-radius: 10em;
+   background: url(fnd2.jpg) ;
+   background-size: cover;
+   font-family: 'Courier New', Courier, monospace;
+   
+}
+.uno {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+   text-align: center;
+   font-size: 20px;
+   color: white;
+}
+
+.item {
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+   text-align: center;
+   font-size: 10px;
+   color: white;
+}
+
+
+
+
+
+.ui.labeled.icon.button, .ui.labeled.icon.buttons .button{
+    display: flex;
+    align-items: center;
+}
+
+
+footer{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    bottom: -65px;
+    height: 80px;
+    transition: all .5s ease;
+}
+footer .icon_footer{
+    background: black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 1.3em;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    right: 48.6%;
+    border-radius: 50%;
+    transition: all .7s ease;
+}
+footer .social_foote{
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+footer .social_foote a{
+    color: #FFF;
+    margin: 5px 5px;
+}
+footer .social_foote a:hover{
+    color: #F50057;
+}
+footer p{
+    font-size: .75em;
+    margin-top: 5px;
+    font-family: 'Livvic', sans-serif;
+    font-weight: 100;
+}
+footer:hover{
+    bottom: 0;
+}
+footer:hover .icon_footer{
+    transform: rotate(180deg);
+    background-color: #F50057;
+}

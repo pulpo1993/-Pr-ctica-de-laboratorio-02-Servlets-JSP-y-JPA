@@ -76,7 +76,7 @@ public class ModificarTelefonoServlet extends HttpServlet {
 		String tipoeditar=request.getParameter("tipom");
 		String operadoraeditar=request.getParameter("operadoram");
 		Telefono telefono=dao.read(Integer.valueOf(request.getParameter("id")));
-		telefono.setCodigo(codigo);
+	
 		telefono.setNumero(numeroeditar);
 		telefono.setTipo(tipoeditar);
 		telefono.setOperadora(operadoraeditar);

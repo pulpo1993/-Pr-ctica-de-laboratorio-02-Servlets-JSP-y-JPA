@@ -5,9 +5,15 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
+import org.eclipse.persistence.internal.jpa.rs.metadata.model.Query;
+
+import ec.ups.edu.PatronDao.DaoFactory;
 import ec.ups.edu.PatronDao.GenericDao;
+import ec.ups.edu.PatronDao.UsuarioDao;
 import ec.ups.edu.entidades.Telefono;
+import ec.ups.edu.entidades.Usuario;
 
 public class JPAGenericDao<T,ID> implements GenericDao<T, ID> {
 	 private Class<T> persistentClass;
@@ -110,9 +116,9 @@ public class JPAGenericDao<T,ID> implements GenericDao<T, ID> {
 	public Usuario validar(String correo, String contra) {
 		Usuario user=new Usuario();
 		try {
-			String sql="SELECT u FROM Usuario u where u.correo='"+correo+"' and u.contra='"+contra+"'";
-			Query query = em.createQuery(sql);
-			user=(Usuario) query.getSingleResult();
+			String sql="SELECT u FROM Usuario u where u.correo='"+correo+"' and u.contra='"+contra+" ";
+			Query query = (Query) em.createQuery(sql);
+			user=(Usuario) ((TypedQuery) query).getSingleResult();
 			System.out.println("recupere"+user);	
 		} catch (Exception e) {
 			System.out.println("Usuario no encontrado"+e.getMessage());
